@@ -30,6 +30,10 @@ app.get('/image.png', (req, res) => {
     res.sendFile(__dirname + '/image.png')
 })
 
+app.get('/viewTrackingData', (req, res) => {
+    res.json(emailTrackingData);
+});
+
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
